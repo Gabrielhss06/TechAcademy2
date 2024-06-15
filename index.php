@@ -15,27 +15,41 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.php"><img src="img/1718060654422 (3).png" alt="BuyHub" width="130px"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.php"><img src="img/1718060654422 (3).png" alt="BuyHub" style="width: 130px;"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Aqui você pode adicionar outros itens de menu se necessário -->
+      </ul>
+      <div class="d-flex">
+        <div class="dropdown">
+          <button class="btn btn-outline-success dropdown-toggle me-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Jogos Free
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            </ul>
-            <form class="d-flex p-2 g-col-6" role="search" action="index.php" method="get">
-            <button class="btn btn-outline-success me-2" type="submit" name="param" value="home">Home</button>
-            </form>
-            <form class="d-flex p-2 g-col-6" role="search" action="index.php" method="get">
-            <button class="btn btn-outline-success me-2" type="submit" name="param" value="contato">Contato</button>
-            </form>
-            <form class="d-flex p-2 g-col-6" role="search" action="index.php" method="get">
-            <button class="btn btn-outline-success me-2" type="submit" name="param" value="desenvolvedores">Desenvolvedores</button>
-            </form>  
-          </div>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </div>
-      </nav>
+        <form class="d-flex" role="search" action="index.php" method="get">
+          <button class="btn btn-outline-success me-2" type="submit" name="param" value="home">Home</button>
+        </form>
+        <form class="d-flex" role="search" action="index.php" method="get">
+          <button class="btn btn-outline-success me-2" type="submit" name="param" value="contato">Contato</button>
+        </form>
+        <form class="d-flex" role="search" action="index.php" method="get">
+          <button class="btn btn-outline-success me-2" type="submit" name="param" value="desenvolvedores">Desenvolvedores</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
       <main>
       <div id="content">
         <?php
@@ -53,10 +67,6 @@
         } else {
             $pagina = "paginas/erro.php";
         }
-
-        // Diagnóstico: Verificar qual página está sendo incluída
-        echo "Tentando incluir a página: " . $pagina . "<br>";
-
         if (file_exists($pagina)) {
             include $pagina;
         } else {
@@ -110,5 +120,6 @@
       
       <!-- JS -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
 </body>
 </html>
