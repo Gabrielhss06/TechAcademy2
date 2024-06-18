@@ -1,3 +1,17 @@
+<?php
+$api = file_get_contents("http://localhost/aula/TechAcademy2/api/games.php");
+$dadosApi = json_decode($api);
+
+foreach ($dadosApi as $jogo) {
+}
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,52 +45,55 @@
           <button class="btn btn-outline-success dropdown-toggle me-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
             Jogos Free
           </button>
+          <?php
+      foreach ($dadosApi as $jogo) {
+      ?>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="<?= $jogo->title ?>"><?= $jogo->title ?></a></li>
           </ul>
+          <?php }
+          ?>
         </div>
-        <form class="d-flex" role="search" action="index.php" method="get">
-          <button class="btn btn-outline-success me-2" type="submit" name="param" value="home">Home</button>
-        </form>
-        <form class="d-flex" role="search" action="index.php" method="get">
-          <button class="btn btn-outline-success me-2" type="submit" name="param" value="contato">Contato</button>
-        </form>
-        <form class="d-flex" role="search" action="index.php" method="get">
-          <button class="btn btn-outline-success me-2" type="submit" name="param" value="desenvolvedores">Desenvolvedores</button>
-        </form>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="btn btn-outline-success me-2" aria-current="page" href="home">HOME</a>
+          </li>
+          <li class="nav-item">
+              <a class="btn btn-outline-success me-2" aria-current="page" href="contato">CONTATO</a>
+          </li>
+          <li class="nav-item">
+              <a class="btn btn-outline-success me-2" aria-current="page" href="quemsomos">QUEM SOMOS</a>
+          </li>
+      </ul>
       </div>
     </div>
   </div>
 </nav>
 
       <main>
-      <div id="content">
-        <?php
+      <?php
         if (isset($_GET["param"])) {
-            $p = explode("/", $_GET["param"]);
+            $param = $_GET["param"];
+            //separar o pagametro por /
+            $p = explode("/", $param);
         }
+
         $page = $p[0] ?? "home";
+        $jogo = $p[1] ?? NULL;
 
-        // Lista de páginas permitidas
-        $valid_pages = ["home", "contato", "desenvolvedores"];
-
-        // Verifica e valida a página
-        if (in_array($page, $valid_pages)) {
-            $pagina = "paginas/{$page}.php";
+        if ($page == "jogo") {
+            $pagina = "jogo/{$jogo}.php";
         } else {
-            $pagina = "paginas/erro.php";
+            $pagina = "paginas/{$page}.php";
         }
+
+        //verificar se a pagina exite
         if (file_exists($pagina)) {
             include $pagina;
         } else {
-            echo "Arquivo não encontrado: " . $pagina . "<br>";
             include "paginas/erro.php";
         }
-        echo $pagina
         ?>
-    </div>
     </main>
       <footer class="bg-body-tertiary text-center text-lg-start mt-5">
         <div class="container p-4">
