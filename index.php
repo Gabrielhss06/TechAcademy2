@@ -49,7 +49,7 @@ foreach ($dadosApi as $jogo) {
       foreach ($dadosApi as $jogo) {
       ?>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="<?= $jogo->title ?>"><?= $jogo->title ?></a></li>
+            <li><a class="dropdown-item" href=""><?= $jogo->title ?></a></li>
           </ul>
           <?php }
           ?>

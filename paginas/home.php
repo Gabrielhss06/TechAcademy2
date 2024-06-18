@@ -69,7 +69,7 @@ foreach ($dadosApi as $jogo) {
 
           <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card">
-                  <img src="<?= $jogo->$logo ?>" class="card-img-top" alt="<?= $jogo->title ?>">
+                  <img src="<?= $jogo->logo ?>" class="card-img-top" alt="<?= $jogo->title ?>">
                   <div class="card-body">
                       <h5 class="card-title fw-bold"><?= $jogo->title ?></h5>
                       <p class="card-text"><?= $jogo->description ?></p>
