@@ -16,19 +16,19 @@ foreach ($dadosApi as $jogo) {
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner shadow-sm p-3 mb-5 bg-body-tertiary rounded ">
     <div class="carousel-item active">
-      <img src="img/omegacollapse.png" class="w-100  " alt="Imagem 1">
+      <img src="imagem/omegacollapse.png" class="w-100  " alt="Imagem 1">
       <div class="carousel-caption d-none d-md-block">
         <h5>Omega Collaps</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/crimsoncurse.png" class="w-100 " alt="Imagem 2">
+      <img src="imagem/crimsoncurse.png" class="w-100 " alt="Imagem 2">
       <div class="carousel-caption d-none d-md-block">
         <h5>Crimssoncurse</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/meowtopia.jpeg" class="w-100 " alt="Imagem 3">
+      <img src="imagem/meowtopia.jpeg" class="w-100 " alt="Imagem 3">
       <div class="carousel-caption d-none d-md-block">
         <h5>Meowtopia</h5>
       </div>
