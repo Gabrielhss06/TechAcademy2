@@ -35,7 +35,7 @@ foreach ($dadosApi as $jogo) {
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php"><img src="imagem/buyhub.png" alt="BuyHub" style="width: 130px;"></a>
+      <a class="navbar-brand" href="home"><img src="imagem/buyhub.png" alt="BuyHub" style="width: 130px;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -50,12 +50,19 @@ foreach ($dadosApi as $jogo) {
               data-bs-toggle="dropdown" aria-expanded="false">
               Jogos Free
             </button>
-      
+
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li>oii<a class="dropdown-item" href="">
-                 
+              <?php
+            foreach ($dadosApi as $jogo) {
+              ?>
+              <li>
+                <a class="dropdown-item btn btn-outline-success me-2" href="">
+                  <?= $jogo->title ?>
                 </a>
               </li>
+              <?php
+              }
+            ?>
             </ul>
           </div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -75,7 +82,7 @@ foreach ($dadosApi as $jogo) {
   </nav>
 
   <main>
-  <?php
+    <?php
 
     if (isset($_GET["param"])) {
       $param = $_GET["param"];
@@ -123,11 +130,12 @@ foreach ($dadosApi as $jogo) {
                 <li><i class="fas fa-envelope"></i> Email: gabrielkidss22@gmail.com</li>
               </ul>
               <div class="mt-3">
-                <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/gabriel_s.speciam?igsh=MTZ6anFveDFnZGZ3cQ==" target="_blank"
+                  class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Gabrielhss06" target="_blank" class="text-dark"><i
+                    class="fab fa-github"></i></a>
               </div>
+
             </div>
           </div>
         </div>
