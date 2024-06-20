@@ -56,7 +56,7 @@ foreach ($dadosApi as $jogo) {
             foreach ($dadosApi as $jogo) {
               ?>
               <li>
-                <a class="dropdown-item btn btn-outline-success me-2" href="">
+                <a class="dropdown-item btn btn-outline-success me-2" href="<?= $jogo->link ?>">
                   <?= $jogo->title ?>
                 </a>
               </li>
