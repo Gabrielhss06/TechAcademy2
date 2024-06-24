@@ -30,6 +30,8 @@ foreach ($dadosApi as $jogo) {
 
   <link rel="shortcut icon" href="img/6c919a27-6387-4889-9e28-70efb0ccd8f4.jpg">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -43,40 +45,40 @@ foreach ($dadosApi as $jogo) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <!-- Aqui você pode adicionar outros itens de menu se necessário -->
-        </ul>
-        <div class="d-flex">
-          <div class="dropdown">
-            <button class="btn btn-outline-success dropdown-toggle me-2" type="button" id="dropdownMenuButton"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Jogos Free
-            </button>
+           </ul>
+          <div class="d-flex">
+            <div class="dropdown">
+              <button class="btn btn-outline-success dropdown-toggle me-2" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Jogos Free
+              </button>
 
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <?php
+              <ul class="dropdown-menu me-auto mb-2" aria-labelledby="dropdownMenuButton">
+                <?php
             foreach ($dadosApi as $jogo) {
               ?>
-              <li>
-                <a class="dropdown-item btn btn-outline-success me-2" href="<?= $jogo->link ?>">
-                  <?= $jogo->title ?>
-                </a>
-              </li>
-              <?php
+                <li>
+                  <a class="dropdown-item btn btn-outline-success me-2" href="<?= $jogo->link ?>" target="_blank">
+                    <?= $jogo->title ?>
+                  </a>
+                </li>
+                <?php
               }
             ?>
+              </ul>
+            </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="btn btn-outline-success me-2" aria-current="page" href="home">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-success me-2" aria-current="page" href="contato">CONTATO</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-success me-2" aria-current="page" href="desenvolvedores">QUEM SOMOS</a>
+              </li>
             </ul>
           </div>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="btn btn-outline-success me-2" aria-current="page" href="home">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-success me-2" aria-current="page" href="contato">CONTATO</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-success me-2" aria-current="page" href="desenvolvedores">QUEM SOMOS</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </nav>
@@ -142,8 +144,8 @@ foreach ($dadosApi as $jogo) {
       </div>
     </div>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2024 Copyright:
-      <a class="text-dark" href="?param=contato">seusite.com</a>
+      © 2024
+      <a class="text-dark"></a>
     </div>
   </footer>
 
@@ -157,6 +159,10 @@ foreach ($dadosApi as $jogo) {
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

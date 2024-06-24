@@ -11,7 +11,7 @@
       "link" => "http://localhost/aula/TechAcademy2/game/omegacollaps/index.html",
  
       "logo" => "http://localhost/aula/TechAcademy2/imagens-jogo/omegacollapse.png",
-      "site" => "https://omegacollapse.vercel.app/index.html",
+      "jogo" => "https://omegacollapse.vercel.app/index.html",
       );
 
         // alana
@@ -22,7 +22,7 @@
       "link" => "#",
  
       "logo" => "http://localhost/aula/TechAcademy2/imagens-jogo/meowtopia.jpeg",
-      "site" => "https://omegacollapse.vercel.app/index.html",
+      "jogo" => "http://localhost/aula/TechAcademy2/game/meowtopia/index.html",
       );
 
         // lucas
@@ -33,7 +33,7 @@
       "link" => "#",
  
       "logo" => "http://localhost/aula/TechAcademy2/imagens-jogo/crimsoncurse.png",
-      "site" => "https://crimsoncurse.000webhostapp.com/",
+      "jogo" => "",
       );
           // gabriel
     $game[4] = array(
@@ -49,9 +49,10 @@
       "id" => 5,
    "title" => "Flyinchicken",
      "description" => "Você assumirá o papel de Hoenn, um poderoso e experiente mago que domina o controle da luz. Vestido com uma capa vermelha, ele exala uma aura de mistério e poder enquanto manipula os mais brilhantes feixes de luz para moldar o mundo ao seu redor. Com olhos azuis que brilham com a intensidade das estrelas, Hoenn é um mestre em utilizar sua magia luminosa tanto para iluminar o caminho quanto para deslumbrar e desorientar seus oponentes.",
-     "link" => "http://localhost/aula/TechAcademy2/game/Flyanp Chicken/index.html",
+     "link" => "http://localhost/aula/TechAcademy2/game/FlyanpChicken/flyingchicken/index.html",
 
      "logo" => "http://localhost/aula/TechAcademy2/imagens-jogo/cybergun.jpg",
+     "jogo" => "game/FlyanpChicken/index.html",
      );  
 
 

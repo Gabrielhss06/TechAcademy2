@@ -5,21 +5,22 @@ $dadosApi = json_decode($api);
 foreach ($dadosApi as $equipe) {
 }
 ?>
-
-<?php
-foreach ($dadosApi as $jogo) {
-?>
-<div class="row g-0 bg-body-secondary position-relative mt-5">
-  <div class="col-md-6 mb-md-0 p-md-4">
-    <img src="<?= $equipe->nome ?>" class="w-100" alt="...">
-  </div>
-  <div class="col-md-6 p-4 ps-md-0">
-    <h5 class="mt-0"><?= $equipe->nome ?></h5>
-    <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
-    <a href="#" class="stretched-link">Go somewhere</a>
-    <h1><?= $equipe->id ?></h1>
-  </div>
-</div>
+<div class="container">
+    <h1 class="my-4 text-center">Nossa Equipe de Desenvolvedores</h1>
+    <div class="row row-cols-4 ">
+        <?php
+         foreach ($dadosApi as $equipe) {
+        ?>
+        <div class="col-sm-3 p-2">
+            <div class="card dev-card ">
+                <img src="<?= $equipe->foto ?>" class="card-img-top " alt="<?= $equipe->nome ?>">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $equipe->nome ?></h5>
+                    <p class="card-text">habilidades</p>
+                    <a href="<?= $equipe->instagram ?>" target="_blank" class="btn btn-primary">instagram</a>
+                </div>
+            </div>
+        </div>
 <?php
   }
 ?>
