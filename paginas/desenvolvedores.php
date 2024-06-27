@@ -1,5 +1,5 @@
 <?php
-$api = file_get_contents("https://buyhubofc.000webhostapp.com/aula/TechAcademy2/api/equipe.php");
+$api = file_get_contents("http://localhost/aula/TechAcademy2/api/equipe.php");
 $dadosApi = json_decode($api);
 
 foreach ($dadosApi as $equipe) {
