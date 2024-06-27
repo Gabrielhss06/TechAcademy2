@@ -1,5 +1,5 @@
 <?php
-$api = file_get_contents("http://localhost/aula/TechAcademy2/api/equipe.php");
+$api = file_get_contents("http://localhost/TechAcademy2/api/equipe.php");
 $dadosApi = json_decode($api);
 
 foreach ($dadosApi as $equipe) {
@@ -16,7 +16,7 @@ foreach ($dadosApi as $equipe) {
                 <img src="<?= $equipe->foto ?>"while="10px" height="250px" class="card-img-top " alt="<?= $equipe->nome ?>">
                 <div class="card-body">
                     <h5 class="card-title"><?= $equipe->nome ?></h5>
-                    <p class="card-text">habilidades</p>
+                    <p class="card-text"><?= $equipe->dados ?></p>
                     <a href="<?= $equipe->instagram ?>" target="_blank" class="btn btn-primary">instagram</a>
                 </div>
             </div>

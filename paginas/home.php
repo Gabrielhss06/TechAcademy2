@@ -1,5 +1,5 @@
 <?php
-$api = file_get_contents("http://localhost/aula/TechAcademy2/api/games.php");
+$api = file_get_contents("http://localhost/TechAcademy2/api/games.php");
 $dadosApi = json_decode($api);
 
 foreach ($dadosApi as $jogo) {
