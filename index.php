@@ -1,5 +1,5 @@
 <?php
-$api = file_get_contents("https://buyhubofc.000webhostapp.com/aula/TechAcademy2/api/games.php");
+$api = file_get_contents("http://localhost/aula/TechAcademy2/aula/TechAcademy2/api/games.php");
 $dadosApi = json_decode($api);
 
 foreach ($dadosApi as $jogo) {
@@ -20,7 +20,7 @@ foreach ($dadosApi as $jogo) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BuyHub</title>
   <!-- LINKS -->
-  <base href="https://buyhubofc.000webhostapp.com/aula/TechAcademy2/">
+  <base href="http://localhost/aula/TechAcademy2/">
   <!-- alterar qunado colocar  site no ar  -->
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
