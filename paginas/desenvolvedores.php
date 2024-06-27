@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 $api = file_get_contents("http://localhost/TechAcademy2/api/equipe.php");
-=======
-$api = file_get_contents("https://buyhubgs.000webhostapp.com/aula/TechAcademy2/api/equipe.php");
->>>>>>> e20f13894969748086c20e9e4c2e9d846d6158ce
 $dadosApi = json_decode($api);
 
 foreach ($dadosApi as $equipe) {
